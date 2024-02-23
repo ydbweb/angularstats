@@ -1,0 +1,14 @@
+<div id="listingdiv">
+  <table class="tablelisting">
+    <tr>
+     <th *ngFor="let item of listItemsWithDataTop;let i2 = index" class="toptd" [ngClass]="{'toptdname': i2 === 0}">
+       {{item.item.name}} <i (click)="sort(i2,i2)" class="fa fa-sort" style="font-size:18px;color:white;cursor:pointer"></i>
+     </th>
+    </tr>
+    <tr *ngFor="let item1 of listItemsWithData;let i = index" [ngClass]="{'rowgrey': i % 2}">
+     <td *ngFor="let item2 of item1;let i2 = index">
+       {{item2.data}}
+     </td>
+    </tr>
+  </table>
+</div>

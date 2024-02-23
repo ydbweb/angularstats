@@ -1,0 +1,23 @@
+<div id="titleone">
+  <div class="titletop">
+    {{titlerightpane.titlemainitem}} | {{titlerightpane.titleitem}}
+  </div>
+  <div class="clearResponsive"></div>
+  <div class="buttons">
+    <input type="button" value="Abc" class="buttonblack" (click)="sortAlphabetic()"/>
+    <input type="button" value="Cba" class="buttonblack" (click)="sortAlphabeticCba()"/>
+    <input type="button" value="Sort Down" class="buttonblack" (click)="sortDown()" />
+    <input type="button" value="Sort Up" class="buttonblack" (click)="sortUp()" />
+  </div>
+</div>
+<div id="canvas-container">
+    <canvas #canvas id="canvas" width="750" [ngStyle]="{'height': '100%'}" ></canvas>
+</div>
+<div *ngFor="let item of listItemsLeftNamesWithData;let i = index">
+   <div class="floatleft">
+     <div class="colorbox" style="background-color:{{item.color}}" ></div>
+     <span class="colorboxname">{{item.name}}</span>
+     <span class="colorboxvalue"> <i>{{item.value}}</i></span>
+   </div>
+   <div class="clear" *ngIf="i+1%4===0"></div>
+</div>

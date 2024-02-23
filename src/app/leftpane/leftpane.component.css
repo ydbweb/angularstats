@@ -1,0 +1,68 @@
+.right{
+  float:left;
+  width:49%;
+  height:20px;
+  font-size:10px;
+}
+
+.radium{
+    vertical-align: middle;
+    font-size:10px;
+}
+
+.radium{
+    vertical-align: middle;
+    font-size:10px;
+    float:left;
+}
+
+.radium2{
+    font-size:11px;
+    margin-top:4px;
+    margin-left:5px;
+    float:left;
+}
+
+#leftpaneitemsNames{
+      margin-top:30px;
+      overflow-y:scroll;
+      max-height:540px;
+
+}
+.rightlpm{
+  float:left;
+  width:99%;
+  font-size:11px;
+  margin-bottom:4px;
+}
+
+.lpmradium{
+    vertical-align: middle;
+    float:left;
+    width:9px;
+}
+
+.lpmradium2{
+    margin-top:4px;
+    margin-left:5px;
+    float:left;
+    width:150px;
+
+}
+
+.land{
+  float:left;
+}
+
+ul.mainitems{
+padding-left:20px;
+list-style-type: lower-roman;
+}
+
+ul.mainitems li{
+  font-size:14px;
+  color:darkblue;
+  font-weight:bold;
+  padding:3px;
+  cursor:pointer;
+}

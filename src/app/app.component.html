@@ -1,0 +1,33 @@
+<div class="overlay" *ngIf='isLoading.includes(0)'><img src='assets/200.gif' alt="Logo" /></div>
+<div id="left">
+  <app-leftpane
+  [listMainItems]="listMainItems"
+  (refreshRight)="setMainitemidRefreshListing($event)"
+  (clickItemId)="clickItemId($event)"
+  (clickNameAddToGraphArray)="clickNameAddToGraphArray($event)"
+  [listItemsLeft1]="listItemsLeft1"
+  [listItemsLeft2]="listItemsLeft2"
+  [listItemsLeftNames]="listItemsLeftNames"
+  [listItemsLeftNamesWithData]="listItemsLeftNamesWithData"
+  [listItemsLeftNamesSelected]="listItemsLeftNamesSelected"
+  [itemid]="itemid"
+  ></app-leftpane>
+</div>
+<div class="clearResponsive"></div>
+<div id="right">
+  <div id="righttop">
+    <div id="barchart">
+        <app-barchart [listItemsLeftNamesWithData]="listItemsLeftNamesWithData"
+                      [titlerightpane]="titlerightpane"
+       ></app-barchart>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div id="listing">
+    <app-listing [listItemsWithData]="listItemsWithData"
+    [listItemsWithDataTop]="listItemsWithDataTop"
+    ></app-listing>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="clear"></div>

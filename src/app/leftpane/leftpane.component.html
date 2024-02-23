@@ -1,0 +1,34 @@
+<ul class="mainitems">
+  <li *ngFor="let item of listMainItems">
+    <span (click)="refreshRightc(item.id)">{{item.name}}&nbsp;&nbsp;</span> <i class="fa fa-area-chart" aria-hidden="true" style="color:orange"></i>
+  </li>
+</ul>
+
+<div id="leftpaneitems">
+  <div class="right" *ngFor="let item of listItemsLeft1">
+    <div>
+      <input type="radio" name="radium" class="radium" [checked]="itemid==item.id" (click)="clickItemIdc(item.id)"/><div class="radium2">{{item.name}}</div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="right" *ngFor="let item of listItemsLeft2">
+    <div>
+      <input type="radio" name="radium" class="radium" [checked]="itemid==item.id" (click)="clickItemIdc(item.id)"/><div class="radium2">{{item.name}}</div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+<div id="leftpaneitemsNames">
+  <div *ngFor="let item of listItemsLeftNames">
+    <div class="land">
+      <input type="checkbox" value="{{item[0].id}}" (click)="clickNameAddToGraphArrayc($event,item[0].data,item[1].data==''?0:item[1].data)" #checkboxes
+      name="radium" class="lpmradium"
+      [checked]="listItemsLeftNamesSelected.includes(item[0].id)? 'checked' : ''"
+      />
+      <div class="lpmradium2">{{item[0].data}}</div>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>

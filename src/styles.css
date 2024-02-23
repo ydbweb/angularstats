@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  position:relative;
+}/* You can add global styles to this file, and also import other style files */
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.clear{
+    line-height:0;
+    clear:both;
+}
+
+.clearResponsive{
+  float:left;
+}
+
+.centered {
+   font-size: 13px;
+   width:100%;
+   max-width:1000px;
+   max-height:1200px;
+   margin:0 auto;
+}
+
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background-color:black;
+    z-index:10000000000;
+    opacity: 0.5;
+}
+.overlay img{
+   height: 250px;
+   left: 50%;
+   margin-top: -125px;
+   margin-left: -125px;
+   position: absolute;
+   top: 50%;
+   width: 250px;
+   z-index:100000000000;
+}
+
+#left{
+  float:left;
+  width:19%;
+  height:100%;
+}
+
+#right{
+  float:left;
+  width:79%;
+  height:100%;
+  border-left:3px solid black;
+  padding-left:15px;
+}
+
+#righttop{
+  float:left;
+  min-height:420px;
+  width:100%;
+}
+#barchart{
+  float:left;
+  width:100%;
+}
+
+#piechart{
+  float:left;
+  width:49%;
+}
+
+#listing{
+  float:left;
+  height:100%;
+  width:100%;
+  border-top:3px solid black;
+}
+
+.clear{
+  clear:both;
+}
+
+#canvas-container {
+   width: 100%;
+   text-align:center;
+}
+
+#titleone{
+  font-size:18px;
+  text-decoration:underline;
+  color:darkblue;
+  padding:15px;
+  font-weight:bolder;
+}
+
+.buttonblack{
+  font-weight:bold;
+  color:white;
+  background-color:darkgrey;
+}
+
+
+@media only screen and (max-width: 920px) {
+  #canvas{
+       width:100%;
+  }
+
+  .clearResponsive{
+    clear:both;
+  }
+
+  .buttons{
+    float:left !important;
+  }
+
+
+ .centered {
+   width:98%;
+   margin-left:1%;
+   margin-right:1%;
+}
+
+#leftpaneitemsNames{
+  max-height:90px !important;
+  margin-top: 5px !important;
+}
+
+
+#left{
+  width:100%;
+}
+
+.mainitems{
+  border-bottom:1px dotted black;
+}
+
+#right{
+  width:100%;
+  border:0px;
+  border-top:1px dotted black;
+  padding-left:0;
+}
+
+#leftpaneitems{
+}
+
+}
