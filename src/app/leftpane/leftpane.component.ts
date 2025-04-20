@@ -8,14 +8,13 @@ import { Component, OnInit , Input, Output, EventEmitter,ViewChildren,QueryList,
 })
 export class LeftpaneComponent implements OnInit {
   @Input() listMainItems :any = [];
-  @Input() listItemsLeft1 :any = [];
-  @Input() listItemsLeft2 :any = [];
+  @Input() listItemsLeft :any = [];
   @Input() listItemsLeftNames :any = [];
   @Input() listItemsLeftNamesWithData : any = [];
   @Input() listItemsLeftNamesSelected : any = [];
   @Input() itemid :any = [];
   @Output() refreshRight = new EventEmitter<string>();
-  @Output() clickItemId = new EventEmitter<string>();
+  @Output() clickItemId = new EventEmitter<any>();
   @Output() clickNameAddToGraphArray : EventEmitter<any> = new EventEmitter<any>();
   @ViewChildren("checkboxes") checkboxes: QueryList<ElementRef>
 
@@ -28,30 +27,9 @@ export class LeftpaneComponent implements OnInit {
     this.refreshRight.emit(mainitemid);
   }
 
-  clickItemIdc(mainitemid : string) {
-    this.clickItemId.emit(mainitemid);
+  clickItemIdc(check1:any,itemid : any, numbitem: any) {
+    this.clickItemId.emit({check1,itemid,numbitem});
   }
 
-  clickNameAddToGraphArrayc(check1 : any,name : string, data1 : string) {
-    var xt=check1.target.checked;
-    check1 = xt ? "1" : "0";
-    this.clickNameAddToGraphArray.emit({check1, name, data1});
-  }
-
-  getRandomInt(max:any) {
-    return Math.floor(Math.random() * max);
-  }
-
-  mathrandom(){
-    if (this.checkboxes!==undefined){
-    this.checkboxes.forEach((element) => {
-      console.log(element);
-      if (this.listItemsLeftNamesSelected.includes(element.nativeElement.value))
-      element.nativeElement.checked = true;
-      else
-      element.nativeElement.checked = false;
-    });
-  }
-  }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit , Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit , Input, Output, EventEmitter,ViewChildren,QueryList,ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-listing',
@@ -8,13 +8,21 @@ import { Component, OnInit , Input, Output, EventEmitter } from '@angular/core';
 export class ListingComponent implements OnInit {
   @Input() listItemsWithData :any = [];
   @Input() listItemsWithDataTop :any = [];
+  @Input() listItemsLeftNamesSelected : any = [];
+  @Output() ListingclickNameAddToGraphArray : EventEmitter<any> = new EventEmitter<any>();
+
 
   sortbool : any;
 
   constructor() {this.sortbool=false; }
 
   ngOnInit(): void {
+  }
 
+  ListingclickNameAddToGraphArrayc(check1: any, iditem : any, name1 : string, data : string){
+    var xt=check1.target.checked;
+    check1 = xt ? "1" : "0";
+    this.ListingclickNameAddToGraphArray.emit({check1, iditem, name1, data});
   }
 
   log(val:any) { console.log(val); }

@@ -8,7 +8,8 @@ export class StatsservService {
 
   constructor(private httpClient : HttpClient) { }
 
-  baseUrl:string = "https://ydbweb.com:8181/angularstatsspring/";
+  baseUrl1:string = "https://ydbweb.com:8181/angularstatsspring/";
+  baseUrl:string = "http://localhost:8080/";
 
   getMainItems() {
     return this.httpClient.get(this.baseUrl+ "mainitems" + '/');

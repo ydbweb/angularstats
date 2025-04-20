@@ -5,11 +5,9 @@
   (refreshRight)="setMainitemidRefreshListing($event)"
   (clickItemId)="clickItemId($event)"
   (clickNameAddToGraphArray)="clickNameAddToGraphArray($event)"
-  [listItemsLeft1]="listItemsLeft1"
-  [listItemsLeft2]="listItemsLeft2"
+  [listItemsLeft]="listItemsLeft"
   [listItemsLeftNames]="listItemsLeftNames"
   [listItemsLeftNamesWithData]="listItemsLeftNamesWithData"
-  [listItemsLeftNamesSelected]="listItemsLeftNamesSelected"
   [itemid]="itemid"
   ></app-leftpane>
 </div>
@@ -26,6 +24,8 @@
   <div id="listing">
     <app-listing [listItemsWithData]="listItemsWithData"
     [listItemsWithDataTop]="listItemsWithDataTop"
+    (ListingclickNameAddToGraphArray)="ListingclickNameAddToGraphArray($event)"
+    [listItemsLeftNamesSelected]="listItemsLeftNamesSelected"
     ></app-listing>
   </div>
   <div class="clear"></div>
